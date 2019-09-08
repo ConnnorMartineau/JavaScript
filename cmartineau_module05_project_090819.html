@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<body>
+
+<form id="myForm" onsubmit="showValues();" method="post" action="/submitmyform.php">
+  First name: <input id="fname" type="text" name="fname" value=""><br>
+  Last name: <input id="lname" type="text" name="lname" value=""><br>
+  Address: <input id="address" type="text" name="address" value=""><br>
+  City: <input id="city" type="text" name="city" value=""><br>
+  State: <input id="state" type="text" name="state" value=""
+  <input id="submit" type="submit" value="Submit">
+</form>
+
+<p></p>
+
+<button onclick="showValues()">Display Values</button>
+
+<table style="width:100%">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td><p id="name1"></p></td>
+    <td><p id="name2"></p></td>
+    <td><p id="address1"></p></td>
+    <td><p id="city1"></p></td>
+    <td><p id="state1"></p></td>
+  </tr>
+</table>
+
+<p id="rasmdemo"></p>
+
+<script>
+function showValues() {
+    var a = document.getElementById("fname").value;
+    var b = document.getElementById("lname").value;
+    var c = document.getElementById("address").value;
+    var d = document.getElementById("city").value;
+    var e = document.getElementById("state").value;
+      document.getElementById("name1").innerHTML = a;
+      document.getElementById("name2").innerHTML = b;
+      document.getElementById("address1").innerHTML = c;
+      document.getElementById("city1").innerHTML = d;
+      document.getElementById("state1").innerHTML = e;
+
+}
+</script>
+
+</body>
+</html>
