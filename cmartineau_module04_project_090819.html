@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+
+  <form id="myForm" onsubmit="showValues();" method="post" action="/submitmyform.php">
+    <p>Tell us what you are! (student, staff, instructor... ect.)</p> <input id="fname" type="text" name="fname" value=""><br>
+
+
+  </form>
+
+  <button class="ui-btn" onclick="myFunction()">Submit</button>
+
+    <p id="project"></p>
+
+      <script>
+      function myFunction(){
+        var a = document.getElementById("fname").value
+        if(a != null) {
+          document.getElementById("project").innerHTML = "I am a Rasmussen " + a;
+          }
+      }
+      </script>
+</div>
+</body>
+</html>
